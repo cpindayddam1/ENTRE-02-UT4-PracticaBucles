@@ -79,11 +79,21 @@ public class PracticaBucles {
      *   
      *   
      */
-    public int obtenerNumeroSinCeros(int numero)   {
-        //TODO
+    public int obtenerNumeroSinCeros(int numero) {
+        int resul = 0;
+        int exponente = 0; //
         
-        
-        return 0;
+        while (numero != 0){
+            int aux2 = numero / 10;
+            int resto = numero % 10;
+            if (resto != 0) {
+                int potencia = (int) Math.pow(10, exponente);
+                resul = resul + resto * potencia;
+                exponente++;
+            }
+            numero = aux2;
+        }
+        return resul;
     }
 
     /**
