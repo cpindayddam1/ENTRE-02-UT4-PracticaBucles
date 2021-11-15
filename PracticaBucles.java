@@ -124,11 +124,10 @@ public class PracticaBucles {
      *  con bucles for
      */
     private void escribirCaracter(char caracter, int n)    {
-       //TODO
-       
-       
-       
-       
+        for (int i = 1; i <= n; i++){
+            System.out.print(caracter);
+        }
+        System.out.println();
     }
 
 }
