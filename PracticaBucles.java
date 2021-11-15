@@ -1,6 +1,6 @@
 import java.util.Random;
 /**
- *    
+ *    ChrissthoperPinday Delgado
  */
 public class PracticaBucles {
     private final char ESPACIO = ' ';
@@ -31,7 +31,34 @@ public class PracticaBucles {
      *   Utiliza solo bucles while
      */
     public void generarNumeros(int n)   {
-       //TODO
+       int maxPar = Integer.MAX_VALUE;
+        int sumaImp = 0;
+        int sumaTotal = 0;
+        int aleatorio = generador.nextInt(6001) - 1000;
+        int i = 1; //contador
+        System.out.println("Nº maximo de aleatorios a generar " + n);
+        System.out.println("o hasta que salga el 0");
+        while (i <= n && aleatorio != 0){
+            sumaTotal += aleatorio;
+            if(esImpar(aleatorio)){
+                sumaImp += aleatorio;
+            }
+            else{ //par
+                if (aleatorio > maxPar){
+                    maxPar = aleatorio;
+                }
+            }
+            /////////////////////////////////////////////////
+            System.out.println(aleatorio + "  " +  obtenerNumeroSinCeros(aleatorio));           
+            //////////////////////////////////////////////            
+            aleatorio = generador.nextInt(6001) - 1000;
+            i++;
+            
+        }
+        double media = (double)sumaTotal / n;
+        System.out.println("          " + "Media:  " + media);
+        System.out.println("   " + "Suma impares:  " + sumaImp);
+        System.out.println("   " + "Maximo pares:  " + maxPar);
 
     }
 
